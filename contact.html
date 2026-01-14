@@ -1,0 +1,130 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: #1064cb;
+            padding: 10px 20px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            font: size 18px;
+        }
+
+        nav a {
+            color: white;
+            border: 0;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin: 1px 0;
+            text-decoration: none;
+
+        }
+
+        nav a:hover {
+            background: #0b3a8d
+        }
+
+        .hero {
+            padding-top: 60px;
+        }
+
+        button {
+            background: #ff9933;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body style="padding: 70;">
+    <header style="padding: 70;">Fresh Chickens BY FEDE MICHEL</header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="payment.html">Mobile Pay</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+    <h1>Contact Us</h1>
+    <form action="#" method="post">
+        <label>Name</label>
+        <input type="text" placeholder="Enter your name" required /><label>Phone</label>
+        <input type="tel" placeholder="Your telephone number" required />
+
+        <label>Message</label>
+        <textarea rows="5" placeholder="Your message..." required></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+    <div style="text-align:center;margin-top:20px;">
+        <a href="https://wa.me/237652097482"
+            style="background:#25D366;color:white;padding:12px 20px;border-radius:8px;text-decoration:none;font-size:18px;">Chat
+            with us on WhatsApp</a>
+    </div>
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        function addToCart(item) {
+            cart.push(item);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(item.name + ' added to cart!');
+        }
+    </script>
+    <div style="text-align: center;">
+        <footer>
+            ©️ 2026 Chicken Store. All rights <br> BY FEDE MICHEL
+        </footer>
+    </div>
+    <script src="script.js "></script>
+</body>

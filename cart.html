@@ -1,0 +1,75 @@
+</html><!-- cart.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <style>
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: #1064cb;
+            padding: 10px 20px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            font: size 18px;
+        }
+
+        nav a {
+            color: white;
+            border: 0;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin: 3px 0;
+            text-decoration: none;
+
+        }
+
+        nav a:hover {
+            background: #0b3a8d
+        }
+
+        .hero {
+            padding-top: 60px;
+        }
+
+        button {
+            background: #ff9933;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body onload="showCart();updateCartCount()">
+    <header>Farm Fresh Chickens by FEDE MICHEL</header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="payment.html">Mobile Pay</a>
+        <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+    </nav>
+    <h1 style="padding-top: 60px;"> Cart</h1>
+    <div id="cartItems"></div>
+    <h3 id="totalPrice">Total: 0CFA</h3>
+    <a href="confirm.html">
+        <button onclick="checkout()">Checkout</button>
+    </a>
+    <script>showCart();</script>
+</body>
+<script src="script.js"></script>
+
+</html>

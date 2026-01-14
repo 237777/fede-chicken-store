@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chicken Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+        }
+
+        body {
+            padding-top: 80px;
+        }
+
+        @media(max-width:600px) {
+            body {
+                padding-top: 120px;
+            }
+        }
+
+        header {
+            background: #3597e7;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: #1064cb;
+            padding: 10px 20px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            font: size 18px;
+        }
+
+        nav a {
+            color: white;
+            border: 0;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin: 3px 0;
+            text-decoration: none;
+
+        }
+
+        nav a:hover {
+            background: #0b3a8d
+        }
+
+        .hero {
+            padding-top: 60px;
+            background: url("image/chicken3.jpg") center/cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .products {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .product {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .product h3 {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        .product button {
+            padding: 10px 15px;
+            background: #ff9933;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body onload="updateCartCount()">
+    <h1 style="padding-top: 70px">product</h1>
+    <header>Farm Fresh Chickens BY FEDE MICHEL</header>
+    <nav>
+        <a href=" index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="payment.html">Mobile Pay</a>
+        <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+    </nav>
+    <div class="hero">Quality Chickens for Sale</div>
+    <section class="products">
+        <div class="product">
+            <img src="image/chicken1.jpg">
+            <h3>STRONG FOWL</h3>
+            <p>Price: 20,000CFA</p>
+            <button onclick="addToCart('STRONG FOWL',20000,'image/chicken1.jpg')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="image/chicken2.jpg" />
+            <h3> LAYER FOWLS</h3>
+            <p>Price: 2,500CFA(each)</p>
+            <button onclick=" addToCart('LAYER FOWLS',2500,'image/chicken2.jpg')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="image/chicken4.png" />
+            <h3> LAYER RED/BROWN</h3>
+            <p>Price: 3000CFA</p>
+            <button onclick="addToCart('LAYER RED/BROWN',3000,'image/chicken4.png')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="image/chicken5.jpg" />
+            <h3> WHITE VILLAGE FOWL</h3>
+            <p>Price: 5000CFA</p>
+            <button onclick="addToCart('WHITE VILLAGE FOWL',5000,'image/chicken5.jpg')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="image/chicken6.jpg" />
+            <h3> WHITE AGRI FOWL</h3>
+            <p>plesh chicken</p>
+            <p>Price: 10,000CFA</p>
+            <button onclick="addToCart('WHITE AGRI FOWL',10000,'image/chicken6.jpg')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="image/chicken7.jpg" />
+            <h3> WHITE AGRI IN FARM</h3>
+            <p>Price: 10,000CFA(each)</p>
+            <button onclick="addToCart('WHITE AGRI IN FARM',10000, 'image/chicken7.jpg')">Add to Cart</button>
+        </div>
+    </section>
+    <footer>
+        ©️ 2026 Chicken Store. All rights reserved BY FEDE MICHEL.
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
